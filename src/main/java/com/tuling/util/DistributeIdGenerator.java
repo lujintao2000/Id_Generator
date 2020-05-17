@@ -7,7 +7,7 @@ package com.tuling.util;
  *
  */
 public class DistributeIdGenerator extends AbstractIdGenerator{
-	private IdGenerator idGenerator;
+	private IdGenerator<String> idGenerator;
 	private String serverId;
 
 	/**
@@ -15,7 +15,7 @@ public class DistributeIdGenerator extends AbstractIdGenerator{
 	 * @param idGenerator
 	 * @param serverId   服务器标识
 	 */
-	public DistributeIdGenerator(IdGenerator idGenerator,String serverId){
+	public DistributeIdGenerator(IdGenerator<String> idGenerator,String serverId){
 		super(idGenerator);
 	}
 
