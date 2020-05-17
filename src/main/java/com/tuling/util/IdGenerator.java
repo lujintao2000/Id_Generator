@@ -6,13 +6,13 @@ package com.tuling.util;
  * @date 2020-05-03
  *
  */
-public interface IdGenerator {
+public interface IdGenerator<T> {
 
 	/**
 	 * 获得一个唯一的ID
 	 * 返回值不能为null
 	 * @return
 	 */
-	public String getId();
+	public T getId();
 	
 }

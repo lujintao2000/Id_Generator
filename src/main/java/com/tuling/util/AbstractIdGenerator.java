@@ -6,14 +6,14 @@ package com.tuling.util;
  * @date 2020-05-03
  *
  */
-public abstract class AbstractIdGenerator implements IdGenerator{
+public abstract class AbstractIdGenerator implements IdGenerator<String>{
 
-	private IdGenerator idGenerator;
-	
+	private IdGenerator<String> idGenerator;
+
 	public AbstractIdGenerator(IdGenerator idGenerator){
 		this.idGenerator = idGenerator;
 	}
-	
+
 
     public String getId(){
         return this.getFinalId(idGenerator == null ? "" : this.idGenerator.getId());
@@ -25,5 +25,5 @@ public abstract class AbstractIdGenerator implements IdGenerator{
 	 * @return  最终的ID
 	 */
 	public abstract String getFinalId(String partialId);
-	
+
 }
