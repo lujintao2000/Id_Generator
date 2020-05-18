@@ -87,7 +87,7 @@ public class DefaultIdGenerator implements IdGenerator<Long>{
 		this.serverId = serverId;
 		executorService.scheduleAtFixedRate(() -> {
 			this.yearDistance = getYearDistance();
-		},0,DAYS_OF_YEAR,TimeUnit.DAYS);
+		},DAYS_OF_YEAR - Calendar.getInstance().get(Calendar.DAY_OF_YEAR),DAYS_OF_YEAR,TimeUnit.DAYS);
 	}
 
 

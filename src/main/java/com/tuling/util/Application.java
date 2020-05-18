@@ -12,11 +12,12 @@ public class Application {
 
 		long startTime = new Date().getTime();
 		long result = 0L;
-		for (int i = 0; i < 20000000; i++) {
+		for (int i = 0; i < 1; i++) {
 			idGenerator.getId();
 		}
 		long endTime = new Date().getTime();
 		System.out.println("total time : " + (endTime - startTime) + "ms");
 		System.out.println("result: " + result);
+		System.out.println(Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
 	}
 }
